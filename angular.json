@@ -13,6 +13,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies" : [
+              "socket.io-client",
+              "socket.io-parser",
+              "debug"
+            ],
             "outputPath": "dist/admgps",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -24,6 +29,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "admgps"
+    }
+  },
+  "defaultProject": "admgps",
+  "cli": {
+    "analytics": "b2cac779-01b1-4c72-bcca-cf74f93d5dac"
+  }
 }
